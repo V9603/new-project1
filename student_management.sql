@@ -1,4 +1,4 @@
-CREATE TABLE `student table` (
+CREATE TABLE `student_table` (
   `student_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `admission_number` varchar(50) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE `student table` (
   PRIMARY KEY (`student_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `admission table` (
+CREATE TABLE `admission_table` (
   `admission_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `student_id` int NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `admission table` (
   PRIMARY KEY (`admission_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `guardians table` (
+CREATE TABLE `guardians_table` (
   `guardian_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `guardians table` (
   PRIMARY KEY (`guardian_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `student_guardian table` (
+CREATE TABLE `student_guardian_table` (
   `student_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `guardian_id` int NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE `student_guardian table` (
   PRIMARY KEY (`student_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `classes table` (
+CREATE TABLE `classes_table` (
   `class_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `class_name` varchar(200) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE `classes table` (
   PRIMARY KEY (`class_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `section table` (
+CREATE TABLE `section_table` (
   `section_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `section_name` varchar(100) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE `section table` (
   PRIMARY KEY (`section_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `enrollments table` (
+CREATE TABLE `enrollments_table` (
   `enrollment_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `student_id` int NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE `enrollments table` (
   PRIMARY KEY (`enrollment_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `promotions table` (
+CREATE TABLE `promotions_table` (
   `promotion_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `student_id` int NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE `promotions table` (
   PRIMARY KEY (`promotion_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `student_action table` (
+CREATE TABLE `student_action_table` (
   `action_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `student_id` int NOT NULL,
@@ -100,7 +100,7 @@ CREATE TABLE `student_action table` (
   PRIMARY KEY (`action_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `status history table` (
+CREATE TABLE `status_history_table` (
   `student_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `old_status` varchar(45) DEFAULT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE `status history table` (
   PRIMARY KEY (`student_id`,`school_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `student documents table` (
+CREATE TABLE `student_documents_table` (
   `doc_id` int NOT NULL AUTO_INCREMENT,
   `school_id` int NOT NULL,
   `student_id` int NOT NULL,
